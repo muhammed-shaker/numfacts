@@ -22,10 +22,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #FFFFFF;
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
+}
+
+.number.active{
+    outline: 4px solid #3C3D37;
+    outline-offset: 2px;
 }
 
 .zero{

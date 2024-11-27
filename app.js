@@ -22,13 +22,23 @@ const  Header = createElement("header", {className: "header"},
   createElement("p", null, "1th fact: Numbers are everywhere..")
 );
 
+let previousValue = null;
+
 const App = () =>{
 
   const [fact, setFact] = useState("Tap a number, discover a fact!");
 
   async function  handleClick(event){
     try{
-      const response = await fetch(`http://numbersapi.com/${event.target.dataset.value}/math`);
+      const value = event.target.dataset.value;
+      if(previousValue){
+        document.querySelector(`[data-value="${previousValue}"]`).classList.remove("active");
+      }
+      
+      document.querySelector(`[data-value="${value}"]`).classList.add("active");
+      previousValue = value;
+
+      const response = await fetch(`http://numbersapi.com/${value}/math`);
       const factText = await response.text();
       setFact(factText);
     } catch(error){
