@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.app{
+    max-width: 622px;
+    margin: 2em auto;
+    text-align: center;
+    font-family: monospace;
+}
+
+.numbers-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    padding-block: 1em;
+}
+
+.number{
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.zero{
+    background-color: black;
+}
+
+.prime{
+    background-color: #85A98F;
+}
+
+.even{
+    background-color: #B3C8CF;
+}
+
+.odd{
+    background-color: #A1EEBD;
+}
+
+.fact{
+    margin-block: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #EDDFE0;
+    color: #3C3D37;
+}
