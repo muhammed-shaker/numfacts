@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .app{
-    max-width: 622px;
+    max-width: 722px;
     margin: 2em auto;
     text-align: center;
     font-family: monospace;
@@ -12,7 +12,7 @@
 
 .numbers-container{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(14, 1fr);
     gap: 8px;
     padding-block: 1em;
 }
@@ -34,7 +34,7 @@
 }
 
 .zero{
-    background-color: black;
+    background-color: #000000;
 }
 
 .prime{
@@ -55,4 +55,22 @@
     border-radius: 8px;
     background-color: #EDDFE0;
     color: #3C3D37;
+}
+
+.browse-ranges{
+    padding-block: 1em;
+    background-color: #EDDFE0;
+    border-radius: 2px;
+    border: 1px solid #BDC0AB4D;
+}
+
+.browse-btn{
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: .7em 1em;
+    margin-inline: 1em;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
