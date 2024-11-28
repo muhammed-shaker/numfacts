@@ -30,17 +30,19 @@ const App = () =>{
 
   async function  handleClick(event){
     try{
+
       const value = event.target.dataset.value;
+      const response = await fetch(`http://numbersapi.com/${value}/math`);
+      const factText = await response.text();
+
       if(previousValue){
         document.querySelector(`[data-value="${previousValue}"]`).classList.remove("active");
       }
-      
+
       document.querySelector(`[data-value="${value}"]`).classList.add("active");
       previousValue = value;
-
-      const response = await fetch(`http://numbersapi.com/${value}/math`);
-      const factText = await response.text();
       setFact(factText);
+      
     } catch(error){
       console.log(error);
     }
